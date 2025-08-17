@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#c4001a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Lo3bt Tounsi – BY BILEL MHAIR" />
+  <title>Lo3bt Tounsi – BY BILEL MHAIR</title>
+
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/icon-180.png" />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      🇹🇳 Lo3bt Tounsi <span class="by">— BY BILEL MHAIR</span>
+    </div>
+    <div class="stats">
+      <span>النقاط: <b id="score">0</b></span>
+      <span>سلسلة: <b id="streak">0</b></span>
+      <span>أفضل نتيجة: <b id="best">0</b></span>
+      <span>❤️ <b id="lives">3</b></span>
+    </div>
+  </header>
+
+  <main class="card">
+    <p class="mini">جاوب بالإنجليزية. تنجّم تطلع تلميحة أو تعدّي.</p>
+
+    <div id="promptWrap">
+      <div class="label">الكلمة التونسية:</div>
+      <div id="prompt" class="prompt">—</div>
+      <div id="arabicAlt" class="alt"></div>
+      <div id="cat" class="cat"></div>
+    </div>
+
+    <div class="answer-area" id="inputMode">
+      <input id="answer" type="text" inputmode="latin-name" placeholder="اكتب الترجمة بالإنجليزية..." autocomplete="off" />
+      <button id="checkBtn">تحقّق</button>
+    </div>
+
+    <div class="choices hidden" id="mcqMode"></div>
+
+    <div class="actions">
+      <button id="hintBtn">تلميحة 💡</button>
+      <button id="skipBtn" class="secondary">عدّي ⏭️</button>
+      <label class="toggle">
+        <input type="checkbox" id="mcqToggle" />
+        <span>اختيارات متعددة</span>
+      </label>
+    </div>
+
+    <p id="feedback" class="feedback"></p>
+
+    <div class="footer">
+      <button id="restartBtn" class="ghost hidden">عاود من الأول</button>
+    </div>
+  </main>
+
+  <div class="watermark">BY BILEL MHAIR</div>
+
+  <script src="./script.js"></script>
+  <noscript>الرجاء تفعيل JavaScript</noscript>
+</body>
+</html>
